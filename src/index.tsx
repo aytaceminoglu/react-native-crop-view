@@ -11,7 +11,7 @@ import {
 
 import Svg, { Defs, Mask, Rect } from "react-native-svg";
 
-export interface CropViewProps extends ViewProps {
+export interface CropViewerProps extends ViewProps {
   onCropChange?: (cropArea: {
     x: number;
     y: number;
@@ -23,7 +23,7 @@ export interface CropViewProps extends ViewProps {
   highlightArea?: boolean;
 }
 
-export const CropView: FC<CropViewProps> = (props) => {
+export const CropViewer: FC<CropViewerProps> = (props) => {
   const { children, onCropChange, areaStyle, handleStyle, highlightArea } =
     props;
 
@@ -278,4 +278,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CropView;
+export default CropViewer;

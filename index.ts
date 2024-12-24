@@ -1,1 +1,1 @@
-export { default as CropView } from "./src";
+export { default as CropViewer } from "./src";
