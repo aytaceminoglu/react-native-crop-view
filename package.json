@@ -1,6 +1,6 @@
 {
   "name": "react-native-crop-viewer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A crop view component for React Native",
   "scripts": {
     "build": "tsc",
