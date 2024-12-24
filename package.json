@@ -1,13 +1,10 @@
 {
-  "name": "react-native-crop-view",
-  "version": "1.0.0",
+  "name": "react-native-crop-viewer",
+  "version": "1.0.1",
   "description": "A crop view component for React Native",
-  "main": "lib/index.js",
-  "module": "lib/index.js",
-  "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "prepare": "npm run build"
+    "prepare": "bob build"
   },
   "keywords": [
     "react-native",
@@ -16,12 +13,52 @@
   ],
   "peerDependencies": {
     "react": "*",
-    "react-native": "*",
-    "react-native-svg": ">=12.0.0"
+    "react-native": "*"
   },
   "devDependencies": {
-    "@types/react": "^18.0.0",
-    "@types/react-native": "^0.70.0",
+    "@types/react": "^18.3.1",
+    "@types/react-native": "^0.73.0",
+    "react-native-builder-bob": "^0.35.2",
+    "react-native-svg": ">=12.0.0",
     "typescript": "^4.9.0"
-  }
+  },
+  "source": "./src/index.tsx",
+  "files": [
+    "src",
+    "lib",
+    "!**/__tests__",
+    "!**/__fixtures__",
+    "!**/__mocks__"
+  ],
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      [
+        "commonjs",
+        {
+          "esm": true
+        }
+      ],
+      [
+        "module",
+        {
+          "esm": true
+        }
+      ],
+      [
+        "typescript",
+        {
+          "esm": true
+        }
+      ]
+    ]
+  },
+  "eslintIgnore": [
+    "node_modules/",
+    "lib/"
+  ],
+  "main": "./lib/commonjs/index.js",
+  "module": "./lib/module/index.js",
+  "types": "./lib/typescript/commonjs/index.d.ts"
 }

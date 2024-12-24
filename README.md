@@ -1,9 +1,9 @@
-# react-native-crop-view
+# react-native-crop-viewer
 
 A customizable crop view component for React Native
 
 ## Installation
 
 ```bash
-npm install react-native-crop-view
+npm install react-native-crop-viewer
 ```
